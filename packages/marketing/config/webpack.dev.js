@@ -4,6 +4,7 @@ const commonConfig = require('./webpack.common');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const packageJSON = require("../package.json");
 
+
 const devConfig = {
   mode: 'development',
   devServer: {

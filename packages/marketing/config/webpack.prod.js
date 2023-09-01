@@ -1,4 +1,4 @@
-const {merge} = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const ModuleFederation = require("webpack/lib/container/ModuleFederationPlugin");
 
 const packageJSON = require("../package.json")
@@ -13,6 +13,7 @@ const prodConfig = {
         new ModuleFederation({
             name: 'marketing',
             filename: 'remoteEntry.js',
+            publicPath: '/marketing/latest/',
             exposes: {
                 './MarketingApp': './src/bootstrap',
             },
